@@ -1,0 +1,125 @@
+import time
+import os
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
+#Write your code below this line 👇
+print("Path")
+print("You are standing on a dusty path on an open plain. To the north is a forest. To the south is a castle.\nWhich way do you want to go?")
+firstList = ["n","s"]
+first = ""
+while first != firstList:
+  first = input("Type N or S\n")
+  first = first.lower()
+  if first == "n":
+    print("You are at the entrance of a shadowy forest. The air is still and smells earthy. There is a cave to your right and an abandoned hut to your left")
+    secondList = ["l","r","s"]
+    second = ""
+    while second != secondList:
+      second = input("Type L, R, or S\n")
+      second = second.lower()
+      if second == "l":
+        print("The hut is empty and seems to have been abandoned for sometime. You do one more quick glance and exit the way you came in")
+        break
+      elif second == "r":
+        print("As you enter the cave, you loose your footing and find yourself falling into a huge web. A giant spider scuttles hungrily towards you. The last thing you hear are your own screams as it sinks its enormous mandibles into your face\nThe End")
+        break
+      elif second == "s":
+        print("You are standing on a dusty path on an open plain. To the north is a forest. To the south is a castle.")
+        break
+      else:
+        print("Invalid response.")
+    else:
+        break
+
+  elif first == "s":
+    print("Castle")
+    print("You are at the gates of a small castle. The drawbridge is open to the south. A path leads away to the north.")
+    thirdList = ["n","s"]
+    third = ""
+    while third != thirdList:
+      third = input("Type N or S\n")
+      third = third.lower()
+      if third == "s":
+        print("Courtyard")
+        print("You enter a small courtyard. There are three doors in front of you; one on the left, one on the right, and one in the center")
+        fourthList = ["l","c","r","n"]
+        fourth = ""
+        while fourth != fourthList:
+          fourth = input("Type L, C, R, or N\n")
+          fourth = fourth.lower()
+          if fourth == "l":
+            print("Left Door - Boobytrap")
+            print("You open the door and hear a click as an arrow from a booby trap hits you in the heart; killing you instantly.\nThe End")
+            break
+          elif fourth == "c":
+            print("Center Door - Treasure")
+            print("The door opens with a creaking soundinto a small dusty room. A chest of gold lies on the ground in front of you\nCongratualtions!\nYou WIN!")
+            break
+          elif fourth == "r":
+            print("Right Door - Rat Swarm")
+            print("The door seems jammed as if there's something against it on the other side. You force your way in and a swarm of rats pour out attacking you. Your feel a thousand sharp death sink into your flesh as you die\nThe End")
+            break
+          elif fourth == "n":
+            print("You are at the gates of a small castle. The drawbridge is open to the south. A path leads away to the north.")
+            break
+          elif third == "s":
+            print("You are at the gates of a small castle. The drawbridge is open to the south. A path leads away to the north.")
+            break
+          else:
+            print("Invalid response.")
+
+      # elif third == "s":
+      #   print("You are at the gates of a small castle. The drawbridge is open to the south. A path leads away to the north.")
+      #   break
+      elif third == "n":
+        print("You are standing on a dusty path on an open plain. To the north is a forest. To the south is a castle.")
+        break
+      else:
+        print("Invalid response.")
+      break
+    else:
+        break
+  else:
+    print("Invalid response.")
+    # time.sleep(1)
+    # os.system('clear')
+    break
+
+break
+
+# secondList = ["n","s"]
+# second = ""
+# while second != secondList:
+#   second = input("Type N or S\n")
+#   second = second.lower()
+#   if second == "n":
+#     print("The path leads you to a shadowy forest. The air is still and smells musty")
+#   elif second == "s":
+#     print("The path winds up a slight hill and eventually ends at the gates of a small castle")
+#   else:
+#     print("Invalid response.")
